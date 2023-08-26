@@ -1,86 +1,26 @@
-{
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "provenance": [],
-      "authorship_tag": "ABX9TyOdYFwxxyNuirVC/M89dXuM",
-      "include_colab_link": true
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
-  "cells": [
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "view-in-github",
-        "colab_type": "text"
-      },
-      "source": [
-        "<a href=\"https://colab.research.google.com/github/AandreiSF/Assignment-Challenge-Question/blob/main/Phyton%20day%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "execution_count": 9,
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "gNSkPBmmU1dj",
-        "outputId": "339c888c-6b9c-4f74-e1c7-8e9f3be5da46"
-      },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Error: The file 'YOUR_ACTUAL_PATH_HERE.txt' was not found.\n",
-            "Time taken: 0.001848459243774414 seconds\n"
-          ]
-        }
-      ],
-      "source": [
-        "import time\n",
-        "\n",
-        "def convert_to_uppercase(filename):\n",
-        "    try:\n",
-        "        with open(filename, 'r') as f:\n",
-        "            content = f.read()\n",
-        "\n",
-        "        with open(filename, 'w') as f:\n",
-        "            f.write(content.upper())\n",
-        "\n",
-        "        print(f\"Successfully converted {filename} to uppercase.\")\n",
-        "\n",
-        "    except FileNotFoundError:\n",
-        "        print(f\"Error: The file '{filename}' was not found.\")\n",
-        "        return\n",
-        "\n",
-        "# Please manually update the file path here\n",
-        "filename = 'YOUR_ACTUAL_PATH_HERE.txt'  # <-- Update this path!\n",
-        "\n",
-        "start_time = time.time()\n",
-        "\n",
-        "# Convert the file to uppercase\n",
-        "convert_to_uppercase(filename)\n",
-        "\n",
-        "end_time = time.time()\n",
-        "print(f\"Time taken: {end_time - start_time} seconds\")\n",
-        "\n",
-        "\n",
-        "\n",
-        "\n",
-        "\n",
-        "\n",
-        "\n"
-      ]
-    }
-  ]
-}
+import time
+
+def convert_to_uppercase(filename):
+    try:
+        with open(filename, 'r') as f:
+            content = f.read()
+
+        with open(filename, 'w') as f:
+            f.write(content.upper())
+            
+        print(f"Successfully converted {filename} to uppercase.")
+            
+    except FileNotFoundError:
+        print(f"Error: The file '{filename}' was not found.")
+        return
+
+# Please manually update the file path here
+filename = 'YOUR_ACTUAL_PATH_HERE.txt'  # <-- Update this path!
+
+start_time = time.time()
+
+# Convert the file to uppercase
+convert_to_uppercase(filename)
+
+end_time = time.time()
+print(f"Time taken: {end_time - start_time} seconds")
